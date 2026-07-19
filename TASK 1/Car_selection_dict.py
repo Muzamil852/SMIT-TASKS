@@ -43,7 +43,7 @@ for index, company in enumerate(company_list, start=1):
 
 user_company = int(input("Enter your selection: "))
 
-if 1 <= user_company <= len(company_list):
+if user_company >= 1 and user_company <= len(company_list):
     company_name = company_list[user_company-1]
     print("\n")
 
@@ -53,7 +53,7 @@ if 1 <= user_company <= len(company_list):
         print(f"{index}. {car}")
 
     user_car = int(input("Enter your selection: "))
-    if 1 <= user_car <= len(car_list):
+    if user_car >= 1 and user_car <= len(company_list):
         car_name = car_list[user_car-1]
         car_details = car_data[company_name][car_name]
         print("*"*20)
